@@ -48,11 +48,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ee2d8e2726794047beada75477a8ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stickyTag: StickySurface
-  checkRadius: 1.5
+  checkRadius: 2
   layerMaskToCheck:
     serializedVersion: 2
     m_Bits: 64
+  springBoolCollision: 1
+  springFrequency: 10
+  springBreakAction: 2
+  springFloatBreak: 400
+  linkPrefab: {fileID: 1299504189342841773, guid: ba10de06c04844944a05b78189abe98c, type: 3}
 --- !u!212 &407469966398501779
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -156,17 +160,17 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3
+  m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8abc3c12cf2f89543accd03a61feffed, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1

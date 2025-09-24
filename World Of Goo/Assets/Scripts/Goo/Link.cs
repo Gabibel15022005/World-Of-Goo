@@ -22,6 +22,8 @@ public class Link : MonoBehaviour
     }
     void Update()
     {
+        if (target == null) return;
+
         positions[0] = transform.position;
         positions[1] = target.position;
         lineRenderer.SetPositions(positions);

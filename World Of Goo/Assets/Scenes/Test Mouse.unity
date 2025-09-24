@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 157542474}
   - component: {fileID: 157542473}
   - component: {fileID: 157542472}
+  - component: {fileID: 157542475}
   m_Layer: 0
   m_Name: Square (3)
   m_TagString: StickySurface
@@ -412,6 +413,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &157542475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157542470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f06120acd99d3418387ec3095c3fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &300915653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -434,11 +447,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.3175917
+      value: -3.05
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.833184
+      value: -1.95
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -516,11 +529,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.3175917
+      value: -2.56
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.833184
+      value: -1.99
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -693,16 +706,16 @@ SpringJoint2D:
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 1282771538}
-  m_BreakForce: 150
+  m_BreakForce: 200
   m_BreakTorque: Infinity
   m_BreakAction: 2
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 2.2916586
+  m_Distance: 1.9588006
   m_DampingRatio: 0
-  m_Frequency: 2
+  m_Frequency: 3
 --- !u!4 &453394095 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
@@ -719,16 +732,16 @@ SpringJoint2D:
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 1835422924}
-  m_BreakForce: 150
+  m_BreakForce: 200
   m_BreakTorque: Infinity
   m_BreakAction: 2
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 2.52745
+  m_Distance: 2.5274491
   m_DampingRatio: 0
-  m_Frequency: 2
+  m_Frequency: 3
 --- !u!1 &462097800
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,11 +914,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.57
+      value: -1.52
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 1.11
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1176,6 +1189,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4956779379759782906, guid: ba10de06c04844944a05b78189abe98c, type: 3}
   m_PrefabInstance: {fileID: 1220891158}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &697063369
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.0917077
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.9114382
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5797080721139066678, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_Name
+      value: Goo (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
 --- !u!1001 &698688484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1598,11 +1668,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.09240818
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.22318387
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1731,11 +1801,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.4675918
+      value: -2.2
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.07318401
+      value: -0.19
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1805,16 +1875,16 @@ SpringJoint2D:
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 2090932583}
-  m_BreakForce: 150
+  m_BreakForce: 200
   m_BreakTorque: Infinity
   m_BreakAction: 2
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 2.5274491
+  m_Distance: 1.5129095
   m_DampingRatio: 0
-  m_Frequency: 2
+  m_Frequency: 3
 --- !u!231 &1055539004
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1826,16 +1896,16 @@ SpringJoint2D:
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 1737080068}
-  m_BreakForce: 150
+  m_BreakForce: 200
   m_BreakTorque: Infinity
   m_BreakAction: 2
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 2.2916589
+  m_Distance: 1.4940213
   m_DampingRatio: 0
-  m_Frequency: 2
+  m_Frequency: 3
 --- !u!1001 &1083319328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1846,11 +1916,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.1900005
+      value: -2.4324083
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.059999943
+      value: -0.09681606
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2172,6 +2242,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba10de06c04844944a05b78189abe98c, type: 3}
+--- !u!1001 &1278409591
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.1583395
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.0716273
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5797080721139066678, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_Name
+      value: Goo (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
 --- !u!1 &1282771536 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5797080721139066678, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
@@ -2198,7 +2325,7 @@ SpringJoint2D:
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 1726145540}
-  m_BreakForce: 150
+  m_BreakForce: 200
   m_BreakTorque: Infinity
   m_BreakAction: 2
   m_AutoConfigureConnectedAnchor: 0
@@ -2207,7 +2334,64 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.900789
   m_DampingRatio: 0
-  m_Frequency: 2
+  m_Frequency: 3
+--- !u!1001 &1492873690
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5797080721139066678, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_Name
+      value: Goo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
 --- !u!1001 &1508931083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2557,16 +2741,16 @@ SpringJoint2D:
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 2090932583}
-  m_BreakForce: 150
+  m_BreakForce: 200
   m_BreakTorque: Infinity
   m_BreakAction: 2
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 3.1602354
+  m_Distance: 2.4989302
   m_DampingRatio: 0
-  m_Frequency: 2
+  m_Frequency: 3
 --- !u!4 &1645284406 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
@@ -2765,16 +2949,16 @@ SpringJoint2D:
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 1835422924}
-  m_BreakForce: 150
+  m_BreakForce: 200
   m_BreakTorque: Infinity
   m_BreakAction: 2
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 2.540177
+  m_Distance: 2.1255822
   m_DampingRatio: 0
-  m_Frequency: 2
+  m_Frequency: 3
 --- !u!1 &1737080067 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5797080721139066678, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
@@ -2796,7 +2980,7 @@ SpringJoint2D:
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 1645284400}
-  m_BreakForce: 150
+  m_BreakForce: 200
   m_BreakTorque: Infinity
   m_BreakAction: 2
   m_AutoConfigureConnectedAnchor: 0
@@ -2805,7 +2989,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.8463213
   m_DampingRatio: 0
-  m_Frequency: 2
+  m_Frequency: 3
 --- !u!4 &1737080074 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
@@ -2827,16 +3011,16 @@ SpringJoint2D:
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 1726145540}
-  m_BreakForce: 150
+  m_BreakForce: 200
   m_BreakTorque: Infinity
   m_BreakAction: 2
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 2.5819376
+  m_Distance: 2.1927607
   m_DampingRatio: 0
-  m_Frequency: 2
+  m_Frequency: 3
 --- !u!231 &1741489449
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2848,7 +3032,7 @@ SpringJoint2D:
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 1835422924}
-  m_BreakForce: 150
+  m_BreakForce: 200
   m_BreakTorque: Infinity
   m_BreakAction: 2
   m_AutoConfigureConnectedAnchor: 0
@@ -2857,7 +3041,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.9545072
   m_DampingRatio: 0
-  m_Frequency: 2
+  m_Frequency: 3
 --- !u!1001 &1748628383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2868,11 +3052,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.73759174
+      value: -0.86
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9331839
+      value: -1.84
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3012,47 +3196,16 @@ SpringJoint2D:
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 1282771538}
-  m_BreakForce: 150
+  m_BreakForce: 200
   m_BreakTorque: Infinity
   m_BreakAction: 2
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 2.5643904
+  m_Distance: 2.1708293
   m_DampingRatio: 0
-  m_Frequency: 2
---- !u!1 &1837024854
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1837024855}
-  m_Layer: 0
-  m_Name: PlayerMouseController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1837024855
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1837024854}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5597794, y: -1.8691589, z: -4.044557}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Frequency: 3
 --- !u!4 &1858453972 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4956779379759782906, guid: ba10de06c04844944a05b78189abe98c, type: 3}
@@ -3209,16 +3362,16 @@ SpringJoint2D:
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 2090932583}
-  m_BreakForce: 150
+  m_BreakForce: 200
   m_BreakTorque: Infinity
   m_BreakAction: 2
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 1.8974787
+  m_Distance: 1.8974786
   m_DampingRatio: 0
-  m_Frequency: 2
+  m_Frequency: 3
 --- !u!231 &1917836058
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -3230,16 +3383,16 @@ SpringJoint2D:
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 1645284400}
-  m_BreakForce: 150
+  m_BreakForce: 200
   m_BreakTorque: Infinity
   m_BreakAction: 2
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 2.5819376
+  m_Distance: 1.8232937
   m_DampingRatio: 0
-  m_Frequency: 2
+  m_Frequency: 3
 --- !u!1001 &1935942980
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3320,11 +3473,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8475914
+      value: -0.58
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.866816
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3384,6 +3537,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4956779379759782906, guid: ba10de06c04844944a05b78189abe98c, type: 3}
   m_PrefabInstance: {fileID: 1873062240}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2036291871
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6820011
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.021865845
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5797080721139066678, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
+      propertyPath: m_Name
+      value: Goo (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
 --- !u!1001 &2046361975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3483,16 +3693,16 @@ SpringJoint2D:
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 1737080068}
-  m_BreakForce: 150
+  m_BreakForce: 200
   m_BreakTorque: Infinity
   m_BreakAction: 2
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 2.5643902
+  m_Distance: 1.8024211
   m_DampingRatio: 0
-  m_Frequency: 2
+  m_Frequency: 3
 --- !u!4 &2090932589 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
@@ -3510,4 +3720,7 @@ SceneRoots:
   - {fileID: 581261063}
   - {fileID: 429367027}
   - {fileID: 748757643}
-  - {fileID: 1837024855}
+  - {fileID: 1492873690}
+  - {fileID: 2036291871}
+  - {fileID: 697063369}
+  - {fileID: 1278409591}
