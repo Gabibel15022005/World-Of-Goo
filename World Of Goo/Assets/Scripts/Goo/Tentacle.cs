@@ -26,6 +26,8 @@ public class Tentacle : MonoBehaviour
         lineRend.positionCount = lenght;
         segmentsPos = new Vector3[lenght];
         segmentsV = new Vector3[lenght];
+
+        ResetPosition();
     }
 
     void Update()
@@ -40,8 +42,20 @@ public class Tentacle : MonoBehaviour
             (
             segmentsPos[i], segmentsPos[i - 1] + targetDir.right * targetDist,
             ref segmentsV[i],
-            smoothSpeed +1 / trailSpeed
+            smoothSpeed + 1 / trailSpeed
             );
+        }
+
+        lineRend.SetPositions(segmentsPos);
+    }
+
+    void ResetPosition()
+    {
+        segmentsPos[0] = targetDir.position;
+
+        for (int i = 1; i < lenght; i++)
+        {
+            segmentsPos[i] = segmentsPos[i - 1] + targetDir.right * targetDist;
         }
 
         lineRend.SetPositions(segmentsPos);
