@@ -30,15 +30,14 @@ public class Link : MonoBehaviour
 
         UpdateCollider();
 
-        // if (UseSpring)
-        // {
-            if (!joint.enabled) Destroy(gameObject); 
-        // }
-        // else
-        // {
-        //     if (!testJoint.enabled) Destroy(gameObject); 
-        // }
-        
+        if (!joint.enabled)
+        {
+            Destroy(joint);// detruit le spring
+
+            transform.parent.GetComponent<Goo>().CheckIfIsLinked();
+            Destroy(gameObject);
+        }
+
     }
 
     void UpdateCollider()

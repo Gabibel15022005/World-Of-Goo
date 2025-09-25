@@ -32,7 +32,7 @@ public class Goo : InteractableWithMouse
 
     void Start()
     {
-        CheckIfLinked();
+        CheckIfIsLinked();
     }
 
     protected override void Update()
@@ -86,7 +86,7 @@ public class Goo : InteractableWithMouse
             if (c == GetComponent<Collider2D>()) return false;
             if (c.TryGetComponent(out Goo g))
             {
-                return g.CheckIfLinked(); // garde seulement si isLinked == true
+                return g.CheckIfIsLinked(); // garde seulement si isLinked == true
             }
             return false;
         });
@@ -115,7 +115,7 @@ public class Goo : InteractableWithMouse
                 secondClosestGooScript.CheckIfIsLinkedTo(closestGoo.GetComponent<Rigidbody2D>(), secondClosestGooScript.rb);
         }
 
-        Debug.Log(gooAreLinked);
+        //Debug.Log(gooAreLinked);
     }
 
     public void ChangeJoint(FixedJoint2D other, Rigidbody2D rigidbody2D)
@@ -128,7 +128,7 @@ public class Goo : InteractableWithMouse
         isStuck = value;
     }
 
-    public bool CheckIfLinked()
+    public bool CheckIfIsLinked()
     {
         isLinked = TryGetComponent(out SpringJoint2D component);
         rb.freezeRotation = isLinked;
@@ -201,7 +201,7 @@ public class Goo : InteractableWithMouse
         // donne le rb de gooCollider
         newJoint.connectedBody = gooCollider.GetComponent<Rigidbody2D>();
 
-        CheckIfLinked();
+        CheckIfIsLinked();
 
         // ajoute aussi les line renderer en enfant
         GameObject linkObj = Instantiate(linkPrefab, transform.position, quaternion.identity, transform);
