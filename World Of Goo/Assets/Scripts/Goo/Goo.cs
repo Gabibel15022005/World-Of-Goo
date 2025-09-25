@@ -14,6 +14,8 @@ public class Goo : InteractableWithMouse
 
     private Collider2D closestGoo;
     private Collider2D secondClosestGoo;
+
+    public LineRenderer preVisualiser1 ,  preVisualiser2;
     private bool gooAreLinked = false;
 
 
@@ -75,6 +77,9 @@ public class Goo : InteractableWithMouse
         {
             canBeLinked = false;
             gooAreLinked = false;
+            
+            preVisualiser1.positionCount = 0;
+            preVisualiser2.positionCount = 0;
             return;
         }
 
@@ -115,7 +120,7 @@ public class Goo : InteractableWithMouse
                 secondClosestGooScript.CheckIfIsLinkedTo(closestGoo.GetComponent<Rigidbody2D>(), secondClosestGooScript.rb);
         }
 
-        //Debug.Log(gooAreLinked);
+        ReplicateOnDrawGizmo();
     }
 
     public void ChangeJoint(FixedJoint2D other, Rigidbody2D rigidbody2D)
@@ -151,26 +156,6 @@ public class Goo : InteractableWithMouse
         }
 
         return false;
-    }
-
-    void OnDrawGizmos()
-    {
-        if (!isDragging) return;
-
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, checkRadius);
-
-        Gizmos.color = Color.yellow;
-        if (gooAreLinked)
-        {
-            if (closestGoo != null) Gizmos.DrawLine(transform.position, closestGoo.transform.position);
-            if (secondClosestGoo != null) Gizmos.DrawLine(transform.position, secondClosestGoo.transform.position);
-        }
-        else
-        {
-            if (closestGoo != null && secondClosestGoo != null) Gizmos.DrawLine(secondClosestGoo.transform.position, closestGoo.transform.position);
-        }
-
     }
 
     private void LinkThisGoo()
@@ -212,6 +197,74 @@ public class Goo : InteractableWithMouse
         link.target = gooCollider.transform;
 
         //Debug.Log($"Build link between {gameObject} and {gooCollider.name}");
+    }
+
+    void ReplicateOnDrawGizmo()
+    {
+        if (!isDragging) return;
+
+        if (gooAreLinked)
+        {
+
+            if (closestGoo != null && secondClosestGoo != null)
+            {
+                preVisualiser1.positionCount = 2;
+                preVisualiser2.positionCount = 2;
+
+                Vector3[] positions1 = new Vector3[2];
+                positions1[0] = transform.position;
+                positions1[1] = closestGoo.transform.position;
+                preVisualiser1.SetPositions(positions1);
+
+                Vector3[] positions2 = new Vector3[2];
+                positions2[0] = transform.position;
+                positions2[1] = secondClosestGoo.transform.position;
+                preVisualiser2.SetPositions(positions2);
+            }
+            else
+            {
+                preVisualiser1.positionCount = 0;
+                preVisualiser2.positionCount = 0;
+            }
+
+        }
+        else
+        {
+            if (closestGoo != null && secondClosestGoo != null)
+            {
+                preVisualiser1.positionCount = 2;
+                preVisualiser2.positionCount = 0;
+
+                Vector3[] positions = new Vector3[2];
+                positions[0] = closestGoo.transform.position;
+                positions[1] = secondClosestGoo.transform.position;
+                preVisualiser1.SetPositions(positions);
+            }
+            else
+            {
+                preVisualiser1.positionCount = 0;
+                preVisualiser2.positionCount = 0;
+            }
+        }
+    }
+    void OnDrawGizmos()
+    {
+        if (!isDragging) return;
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, checkRadius);
+
+        Gizmos.color = Color.yellow;
+        if (gooAreLinked)
+        {
+            if (closestGoo != null) Gizmos.DrawLine(transform.position, closestGoo.transform.position);
+            if (secondClosestGoo != null) Gizmos.DrawLine(transform.position, secondClosestGoo.transform.position);
+        }
+        else
+        {
+            if (closestGoo != null && secondClosestGoo != null) Gizmos.DrawLine(secondClosestGoo.transform.position, closestGoo.transform.position);
+        }
+
     }
 
 }
