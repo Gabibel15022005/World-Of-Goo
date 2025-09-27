@@ -16,6 +16,10 @@ public class Tentacle : MonoBehaviour
     public float wiggleSpeed;
     public float wiggleMagnitude;
     public Transform wiggleDir;
+    public bool randomWiggle = false;
+    public float wiggleOffset = 0;
+    private float wiggleSpeedMult;
+    private float wiggleMagnitudeMult;
 
 
     private Vector3[] segmentsPos;
@@ -27,12 +31,26 @@ public class Tentacle : MonoBehaviour
         segmentsPos = new Vector3[lenght];
         segmentsV = new Vector3[lenght];
 
+        if (randomWiggle)
+        {
+            wiggleSpeedMult = UnityEngine.Random.Range(0.8f, 1.2f);
+            wiggleMagnitudeMult = UnityEngine.Random.Range(0.8f, 1.2f);
+            wiggleOffset = UnityEngine.Random.Range(0f, 2 * Mathf.PI);
+        }    
+
         ResetPosition();
     }
 
     void Update()
     {
-        wiggleDir.localRotation = Quaternion.Euler(0, 0, Mathf.Sin(Time.time * wiggleSpeed) * wiggleMagnitude);
+        float currentAngle;
+
+        if (randomWiggle)
+            currentAngle = Mathf.Sin(Time.time * wiggleSpeed * wiggleSpeedMult + wiggleOffset) * wiggleMagnitude * wiggleMagnitudeMult;
+        else
+            currentAngle = Mathf.Sin(Time.time * wiggleSpeed) * wiggleMagnitude;
+
+        wiggleDir.localRotation = Quaternion.Euler(0, 0, currentAngle);
 
         segmentsPos[0] = targetDir.position;
 

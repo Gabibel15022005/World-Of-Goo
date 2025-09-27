@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 83693182989939631, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
       propertyPath: m_Name
-      value: Algues
+      value: Algue
       objectReference: {fileID: 0}
     - target: {fileID: 1765574980227571157, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
       propertyPath: m_SortingOrder
@@ -95,6 +95,10 @@ PrefabInstance:
     - target: {fileID: 3875294732457863519, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
       propertyPath: wiggleSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3875294732457863519, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: randomWiggle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3875294732457863519, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
       propertyPath: wiggleMagnitude

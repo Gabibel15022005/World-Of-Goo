@@ -589,6 +589,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tencacle
       objectReference: {fileID: 0}
+    - target: {fileID: 3875294732457863519, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: trailSpeed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 3875294732457863519, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: randomWiggle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6953235206112464573, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -655,6 +663,14 @@ PrefabInstance:
     - target: {fileID: 83693182989939631, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
       propertyPath: m_Name
       value: Tencacle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3875294732457863519, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: trailSpeed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 3875294732457863519, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: randomWiggle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4482601604641291029, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -742,6 +758,14 @@ PrefabInstance:
     - target: {fileID: 83693182989939631, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
       propertyPath: m_Name
       value: Tencacle (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3875294732457863519, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: trailSpeed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 3875294732457863519, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: randomWiggle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4482601604641291029, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
       propertyPath: m_LocalRotation.w
