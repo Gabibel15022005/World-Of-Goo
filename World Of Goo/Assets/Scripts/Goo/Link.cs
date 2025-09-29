@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class Link : MonoBehaviour
 {
-    private int length = 2;
+    private int length = 3;
     public LineRenderer lineRenderer;
     public Transform target;
     public SpringJoint2D joint;
@@ -25,7 +25,8 @@ public class Link : MonoBehaviour
         if (target == null) return;
 
         positions[0] = transform.position;
-        positions[1] = target.position;
+        positions[1] = (transform.position + target.position) / 2f;
+        positions[2] = target.position;
         lineRenderer.SetPositions(positions);
 
         UpdateCollider();
