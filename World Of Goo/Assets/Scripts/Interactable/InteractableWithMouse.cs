@@ -6,6 +6,7 @@ public class InteractableWithMouse : MonoBehaviour
     protected Rigidbody2D rb;
     protected Collider2D collid;
     protected bool isDragging = false;
+    public bool IsDragging => isDragging;
     protected bool isUnderTheMouse = false;
 
     void Awake()
