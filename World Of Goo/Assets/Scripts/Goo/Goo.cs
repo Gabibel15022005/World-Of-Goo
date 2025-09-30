@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -33,7 +34,7 @@ public class Goo : InteractableWithMouse
     [Space(30)]
     [Header("End of Level variable")]
     private Transform target;
-    private bool isEnding = false;
+    [HideInInspector] public bool isEnding = false;
     private float angle; // angle actuel en radians
     private float radius; // distance actuelle au centre
 
@@ -64,10 +65,10 @@ public class Goo : InteractableWithMouse
         Debug.Log($"the end is here : {endOfLevel.position}");
 
         // casser tout les liens 
-        foreach (SpringJoint2D joint in GetComponents<SpringJoint2D>())
-        {
-            joint.enabled = false;
-        }
+        // foreach (SpringJoint2D joint in GetComponents<SpringJoint2D>())
+        // {
+        //     joint.enabled = false;
+        // }
 
         // activer le mode "aspiration"
         target = endOfLevel;
@@ -93,6 +94,7 @@ public class Goo : InteractableWithMouse
         }
         else
         {
+            isDragging = false;
             // faire grossir les vitesses au fil du temps
             angularSpeed += angularAcceleration * Time.deltaTime;
             radialSpeed += radialAcceleration * Time.deltaTime;

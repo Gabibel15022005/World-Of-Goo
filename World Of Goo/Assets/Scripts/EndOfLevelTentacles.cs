@@ -35,7 +35,7 @@ public class EndOfLevelTentacles : MonoBehaviour
     void Update()
     {
         // avancer ou reculer la transition
-        if (endOfLevel.HasReachedTheEnd)
+        if (endOfLevel.hasFoundGoo)
             transitionT = Mathf.MoveTowards(transitionT, 1f, Time.deltaTime * speedChangeRate);
         else
             transitionT = Mathf.MoveTowards(transitionT, 0f, Time.deltaTime * speedChangeRate);

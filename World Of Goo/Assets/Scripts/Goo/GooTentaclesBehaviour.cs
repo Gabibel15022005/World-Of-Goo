@@ -17,7 +17,7 @@ public class GooTentaclesBehaviour : MonoBehaviour
     {
         if (goo == null) return;
 
-        if (goo.IsDragging)
+        if (goo.IsDragging || goo.isEnding)
         {
             ChangeTentaclesValues(targetDist, smoothSpeed, trailSpeed, wiggleSpeed, wiggleMagnitude);
         }

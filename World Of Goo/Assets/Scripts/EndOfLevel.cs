@@ -6,7 +6,7 @@ public class EndOfLevel : MonoBehaviour
     private bool hasReachedTheEnd = false;
     public bool HasReachedTheEnd => hasReachedTheEnd;
 
-    private bool hasFoundGoo = false;
+    [HideInInspector] public bool hasFoundGoo = false;
     [SerializeField] private float radius = 2;
     [SerializeField] private LayerMask gooLayerMask;
 
