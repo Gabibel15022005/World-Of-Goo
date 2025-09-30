@@ -18,7 +18,6 @@ public class InteractableWithMouse : MonoBehaviour
     protected virtual void Update()
     {
         CheckForMouse();
-
     }
 
     protected virtual void CheckForMouse()

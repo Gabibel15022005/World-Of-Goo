@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf39807ce77c1b49b5ce8809669b7f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  centerLimits: {x: 0, y: 2.5}
-  sizeLimits: {x: 19, y: 16}
+  centerLimits: {x: 0, y: 0.09}
+  sizeLimits: {x: 17.8, y: 10}
   sizeDeadZone: {x: 13, y: 6}
   moveSpeed: 2

@@ -315,10 +315,10 @@ MonoBehaviour:
   springFloatBreak: 75
   linkPrefab: {fileID: 1299504189342841773, guid: ba10de06c04844944a05b78189abe98c, type: 3}
   isEnding: 0
-  angularSpeed: 1
-  radialSpeed: 1
-  angularAcceleration: 1
-  radialAcceleration: 1
+  angularSpeed: 2
+  radialSpeed: 3
+  angularAcceleration: 2
+  radialAcceleration: 2
 --- !u!212 &407469966398501779
 SpriteRenderer:
   m_ObjectHideFlags: 0

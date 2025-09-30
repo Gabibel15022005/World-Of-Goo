@@ -49,6 +49,7 @@ public class Goo : InteractableWithMouse
     void Start()
     {
         CheckIfIsLinked();
+        GameManager.AddGooToGameManager?.Invoke(this);
     }
     void OnEnable()
     {
@@ -60,15 +61,20 @@ public class Goo : InteractableWithMouse
         EndOfLevel.PosEndOfLevel -= GoToEndOfLevel;
     }
 
+    void BreakAllLink()
+    {
+        foreach (SpringJoint2D joint in GetComponents<SpringJoint2D>())
+        {
+            joint.enabled = false;
+        }
+    }
+
     private void GoToEndOfLevel(Transform endOfLevel)
     {
-        Debug.Log($"the end is here : {endOfLevel.position}");
+        //Debug.Log($"the end is here : {endOfLevel.position}");
 
         // casser tout les liens 
-        // foreach (SpringJoint2D joint in GetComponents<SpringJoint2D>())
-        // {
-        //     joint.enabled = false;
-        // }
+        BreakAllLink();
 
         // activer le mode "aspiration"
         target = endOfLevel;
@@ -112,6 +118,12 @@ public class Goo : InteractableWithMouse
             ) * radius;
 
             transform.position = newPos;
+            
+            if (radius <= 0.05f) // tolérance pour éviter qu'il tourne à l'infini
+            {
+                Destroy(gameObject);
+            }
+
         }
     }
 
@@ -238,6 +250,8 @@ public class Goo : InteractableWithMouse
 
     private void LinkThisGoo()
     {
+        GameManager.AddToMove?.Invoke();
+
         if (gooAreLinked)
         {
             LinkTheGooTo(closestGoo);
