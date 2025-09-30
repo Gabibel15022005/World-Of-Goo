@@ -1,4 +1,4 @@
-using Unity.Mathematics;
+using System.ComponentModel;
 using UnityEngine;
 
 public class Tentacle : MonoBehaviour
@@ -22,11 +22,25 @@ public class Tentacle : MonoBehaviour
     private float wiggleMagnitudeMult;
 
 
+    [HideInInspector] public float initialTargetDist;
+    [HideInInspector] public float initialSmoothSpeed;
+    [HideInInspector] public float initialTrailSpeed;
+    [HideInInspector] public float initialWiggleMagnitude;
+    [HideInInspector] public float initialWiggleSpeed;
+
+
     private Vector3[] segmentsPos;
     private Vector3[] segmentsV;
 
     void Start()
     {
+        initialTargetDist = targetDist;
+        initialSmoothSpeed = smoothSpeed;
+        initialTrailSpeed = trailSpeed;
+        initialWiggleSpeed = wiggleSpeed;
+        initialWiggleMagnitude = wiggleMagnitude;
+
+
         lineRend.positionCount = lenght;
         segmentsPos = new Vector3[lenght];
         segmentsV = new Vector3[lenght];

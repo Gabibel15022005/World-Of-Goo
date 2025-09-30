@@ -13,19 +13,6 @@ public class GooTentaclesBehaviour : MonoBehaviour
     public float wiggleSpeed;
     public float wiggleMagnitude;
 
-
-    [Header("Before change")]
-    private float oldTargetDist;
-    private float oldSmoothSpeed;
-    private float oldTrailSpeed;
-    private float oldWiggleSpeed;
-    private float oldWiggleMagnitude;
-
-    void Start()
-    {
-        GetOldTentacleValues();
-    }
-
     void Update()
     {
         if (goo == null) return;
@@ -36,7 +23,7 @@ public class GooTentaclesBehaviour : MonoBehaviour
         }
         else
         {
-            ChangeTentaclesValues(oldTargetDist, oldSmoothSpeed, oldTrailSpeed, oldWiggleSpeed, oldWiggleMagnitude);
+            ChangeTentaclesValues(tentacles[0].initialTargetDist, tentacles[0].initialSmoothSpeed, tentacles[0].initialTrailSpeed, tentacles[0].initialWiggleSpeed, tentacles[0].initialWiggleMagnitude);
         }
 
     }
@@ -52,14 +39,5 @@ public class GooTentaclesBehaviour : MonoBehaviour
             tentacle.wiggleMagnitude = newWiggleMagnitude;
         }
 
-    }
-
-    void GetOldTentacleValues()
-    {
-        oldTargetDist = tentacles[0].targetDist;
-        oldSmoothSpeed = tentacles[0].smoothSpeed;
-        oldTrailSpeed = tentacles[0].trailSpeed;
-        oldWiggleSpeed = tentacles[0].wiggleSpeed;
-        oldWiggleMagnitude = tentacles[0].wiggleMagnitude;
     }
 }

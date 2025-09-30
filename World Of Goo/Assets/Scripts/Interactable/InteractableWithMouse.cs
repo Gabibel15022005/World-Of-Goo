@@ -17,6 +17,12 @@ public class InteractableWithMouse : MonoBehaviour
 
     protected virtual void Update()
     {
+        CheckForMouse();
+
+    }
+
+    protected virtual void CheckForMouse()
+    {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
