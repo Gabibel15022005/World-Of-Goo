@@ -3,8 +3,8 @@ using UnityEngine;
 [System.Serializable]
 public class ConditionEntry
 {
-    public UnlockingCondition condition; // la logique (ex: TimeCondition)
-    public int intValue;                 // ex: maxTime ou requiredKills
+    public UnlockingCondition condition;
+    public int intValue;
 }
 
 public abstract class UnlockingCondition : ScriptableObject

@@ -13,14 +13,6 @@ public class EndOfLevel : MonoBehaviour
     [SerializeField] private float endTimer;
     private float timer;
     public static Action<Transform> PosEndOfLevel;
-
-
-    // check if un goo linked est entré dans un OverlapCircleAll
-    // si oui alors hasReachedTheEnd = true ( permet de déclencher l'animation de fin de niveau)
-
-
-    // une fois fini les goo vont etre aspirer vers ce game object
-    // envoie un Event pour donner une destination (ce gameobject) aux goo 
     void Update()
     {
         if (hasReachedTheEnd) return;

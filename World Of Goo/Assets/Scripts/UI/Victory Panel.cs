@@ -9,6 +9,8 @@ public class VictoryPanel : MonoBehaviour
     [SerializeField] StarUI[] starsUI;
     [SerializeField] ConditionEntry[] conditions;
 
+    [SerializeField] ButtonScript[] buttons;
+
     [HideInInspector] public LevelStats levelStats;
 
     void SpawnVictoryPanel(LevelStats stats)
@@ -42,12 +44,15 @@ public class VictoryPanel : MonoBehaviour
     {
         for (int i = 0; i < starsUI.Length; i++)
         {
-            if (conditions[i].condition.CheckWithOverride(levelStats, conditions[i].intValue))
+            if (starsUI[i].isAlreadyUnlocked || conditions[i].condition.CheckWithOverride(levelStats, conditions[i].intValue))
             {
                 starsUI[i].UnlockStar();
                 yield return new WaitForSeconds(0.5f);
             }
         }
+
+        foreach (ButtonScript button in buttons)
+            button.SpawnButton();
     }
 
     
