@@ -74,7 +74,7 @@ public class Goo : InteractableWithMouse
         //Debug.Log($"the end is here : {endOfLevel.position}");
 
         // casser tout les liens 
-        BreakAllLink();
+        // BreakAllLink();
 
         // activer le mode "aspiration"
         target = endOfLevel;

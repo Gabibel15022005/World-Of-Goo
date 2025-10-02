@@ -6,12 +6,12 @@ public class MoveCountUI : MonoBehaviour
     [SerializeField] TMP_Text text;
     void OnEnable()
     {
-        GameManager.UpdateMoveCountUI += UpdateMoveCountUI;
+        GameManager.UpdateMoveCountUIAction += UpdateMoveCountUI;
     }
 
     void OnDisable()
     {
-        GameManager.UpdateMoveCountUI -= UpdateMoveCountUI;
+        GameManager.UpdateMoveCountUIAction -= UpdateMoveCountUI;
     }
 
     void UpdateMoveCountUI(int value)

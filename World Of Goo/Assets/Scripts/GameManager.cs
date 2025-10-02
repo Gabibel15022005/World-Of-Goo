@@ -1,21 +1,28 @@
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static Action AddToMove;
-    public static Action StartTheGame;
-    public static Action StartTheTimer;
+    public static Action StartTheGameAction;
+    public static Action PauseTimerAction;
 
     public static Action<Goo> AddGooToGameManager;
     public static Action<Goo> RemoveGooToGameManager;
     private List<Goo> goos = new List<Goo>();
     private bool hasGameStarted = false;
 
+    private float timer = 0;
+    private int lastSecond = -1;
+    private int minutes = 0;
+    private int seconds = 0;
+    private bool isTimerPaused = false;
 
-    public static Action<int> UpdateTimerUI;
-    public static Action<int> UpdateMoveCountUI;
+
+    public static Action<int, int> UpdateTimerUIAction;
+    public static Action<int> UpdateMoveCountUIAction;
     private int moveCount = 0;
 
 
@@ -27,9 +34,32 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //if (!hasGameStarted) return;
-        
+
         CheckOnGoo();
 
+        if (!isTimerPaused)
+        {
+            UpdateTimer();
+            UpdateTimerUI();
+        }
+
+
+    }
+
+
+    void UpdateTimer()
+    {
+        timer += Time.deltaTime;
+        minutes = Mathf.FloorToInt(timer / 60f);
+        seconds = Mathf.FloorToInt(timer % 60f);
+    }
+    void UpdateTimerUI()
+    {
+        if (seconds != lastSecond)
+        {
+            lastSecond = seconds;
+            UpdateTimerUIAction?.Invoke(minutes, seconds);
+        }
     }
 
     void CheckOnGoo()
@@ -48,22 +78,23 @@ public class GameManager : MonoBehaviour
     void EndTheLevel(Transform transform) // déclenche la fin du niveau
     {
         //  start a little timer before spawning or activating the UI for the end of the level
-
+        VictoryPanel.SpawnVictoryPanelAction?.Invoke();
+        PauseTimer(true);
     }
 
     void AddToMoveCount() // ajoute au nombre de coup jouer en tout
     {
         moveCount++;
-        UpdateMoveCountUI?.Invoke(moveCount);
+        UpdateMoveCountUIAction?.Invoke(moveCount);
     }
 
     void StartGame() // appelle l'event ou commencer le jeu
     {
-        StartTheGame?.Invoke();
+        StartTheGameAction?.Invoke();
     }
-    void StartTimer() // appelle l'event pour commencer le timer 
+    void PauseTimer(bool value) // appelle l'event pour commencer le timer 
     {
-        StartTheTimer?.Invoke();
+        isTimerPaused = value;
     }
 
     void AddGooToGameManagerF(Goo goo)
