@@ -1,13 +1,22 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class VictoryPanel : MonoBehaviour
 {
     [SerializeField] Animator animator;
-    public static Action SpawnVictoryPanelAction;
+    public static Action<LevelStats> SpawnVictoryPanelAction;
+    [SerializeField] StarUI[] starsUI;
+    [SerializeField] ConditionEntry[] conditions;
 
-    void SpawnVictoryPanel()
+    [HideInInspector] public LevelStats levelStats;
+
+    void SpawnVictoryPanel(LevelStats stats)
     {
+        levelStats = stats;
+
+        SetEachStarDescription();
+
         if (animator == null)
         {
             Debug.Log($"There is no animator referenced in : {gameObject.name}");
@@ -16,6 +25,32 @@ public class VictoryPanel : MonoBehaviour
 
         animator.Play("SpawnVictoryPanel");
     }
+
+
+    void UnlockEachStar()
+    {
+        StartCoroutine(UnlockEachStarCoroutine());
+    }
+
+    void SetEachStarDescription()
+    {
+        for (int i = 0; i < starsUI.Length; i++)
+            starsUI[i].SetDescription(conditions[i].condition.GenerateDefaultDescription(conditions[i].intValue));
+    }
+
+    IEnumerator UnlockEachStarCoroutine()
+    {
+        for (int i = 0; i < starsUI.Length; i++)
+        {
+            if (conditions[i].condition.CheckWithOverride(levelStats, conditions[i].intValue))
+            {
+                starsUI[i].UnlockStar();
+                yield return new WaitForSeconds(0.5f);
+            }
+        }
+    }
+
+    
 
     void OnEnable()
     {
