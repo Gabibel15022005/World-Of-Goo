@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -25,18 +26,108 @@ public class Goo : InteractableWithMouse
     [SerializeField] private JointBreakAction2D springBreakAction;
     [SerializeField] private float springFloatBreak;
 
-
-
     [Space(30)]
     [Header("LineRenderer variable")]
     [SerializeField] private GameObject linkPrefab;
 
+
+    [Space(30)]
+    [Header("End of Level variable")]
+    private Transform target;
+    [HideInInspector] public bool isEnding = false;
+    private float angle; // angle actuel en radians
+    private float radius; // distance actuelle au centre
+
+    [SerializeField] private float angularSpeed = 2f; // vitesse de rotation de départ
+    [SerializeField] private float radialSpeed = 1f;  // vitesse de rapprochement de départ
+
+    [SerializeField] private float angularAcceleration = 1f; // augmente la vitesse de rotation
+    [SerializeField] private float radialAcceleration = 2f;  // rapproche plus vite
+
+
+
     void Start()
     {
         CheckIfIsLinked();
+        GameManager.AddGooToGameManager?.Invoke(this);
+    }
+    void OnEnable()
+    {
+        EndOfLevel.PosEndOfLevel += GoToEndOfLevel;
     }
 
+    void OnDisable()
+    {
+        EndOfLevel.PosEndOfLevel -= GoToEndOfLevel;
+    }
+
+    void BreakAllLink()
+    {
+        foreach (SpringJoint2D joint in GetComponents<SpringJoint2D>())
+        {
+            joint.enabled = false;
+        }
+    }
+
+    private void GoToEndOfLevel(Transform endOfLevel)
+    {
+        //Debug.Log($"the end is here : {endOfLevel.position}");
+
+        // casser tout les liens 
+        // BreakAllLink();
+
+        // activer le mode "aspiration"
+        target = endOfLevel;
+        isEnding = true;
+
+        // initialiser angle et radius par rapport à la cible
+        Vector2 offset = transform.position - target.position;
+        angle = Mathf.Atan2(offset.y, offset.x);
+        radius = offset.magnitude;
+
+        // faire passer les goo a travers tout 
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        collid.isTrigger = true;
+
+    }
+
+
     protected override void Update()
+    {
+        if (!isEnding)
+        {
+            CheckForMouse();
+        }
+        else
+        {
+            isDragging = false;
+            // faire grossir les vitesses au fil du temps
+            angularSpeed += angularAcceleration * Time.deltaTime;
+            radialSpeed += radialAcceleration * Time.deltaTime;
+
+            // réduire le rayon (aspiration)
+            radius = Mathf.Max(0f, radius - radialSpeed * Time.deltaTime);
+
+            // augmenter l’angle (tourbillon)
+            angle += angularSpeed * Time.deltaTime;
+
+            // recalculer position
+            Vector2 newPos = (Vector2)target.position + new Vector2(
+                Mathf.Cos(angle),
+                Mathf.Sin(angle)
+            ) * radius;
+
+            transform.position = newPos;
+            
+            if (radius <= 0.05f) // tolérance pour éviter qu'il tourne à l'infini
+            {
+                Destroy(gameObject);
+            }
+
+        }
+    }
+
+    protected override void CheckForMouse()
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
@@ -159,6 +250,8 @@ public class Goo : InteractableWithMouse
 
     private void LinkThisGoo()
     {
+        GameManager.AddToMove?.Invoke();
+
         if (gooAreLinked)
         {
             LinkTheGooTo(closestGoo);

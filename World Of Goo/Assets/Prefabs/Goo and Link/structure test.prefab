@@ -123,7 +123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.497
+      value: -8.66
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -215,7 +215,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 1.4050087
+  m_Distance: 2.150075
   m_DampingRatio: 0
   m_Frequency: 10
 --- !u!231 &8347223601493856348
@@ -236,7 +236,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 1.1391631
+  m_Distance: 1.4885172
   m_DampingRatio: 0
   m_Frequency: 10
 --- !u!1001 &2292921440816706430
@@ -257,7 +257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2624921696897313619, guid: ba10de06c04844944a05b78189abe98c, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3368109996435996628, guid: ba10de06c04844944a05b78189abe98c, type: 3}
       propertyPath: joint
@@ -327,11 +327,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.244
+      value: -6.81
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.746
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -419,7 +419,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 1.1609931
+  m_Distance: 1.4415617
   m_DampingRatio: 0
   m_Frequency: 10
 --- !u!231 &639981862379610895
@@ -440,7 +440,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 1.6980354
+  m_Distance: 2.3152027
   m_DampingRatio: 0
   m_Frequency: 10
 --- !u!1001 &3187849860469580576
@@ -593,11 +593,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.3
+      value: -8.22
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.77
+      value: -1.47
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -679,7 +679,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 1.056273
+  m_Distance: 1.4103194
   m_DampingRatio: 0
   m_Frequency: 10
 --- !u!1001 &4803940902545411257
@@ -836,11 +836,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.092
+      value: -6.51
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.897
+      value: -2.91
       objectReference: {fileID: 0}
     - target: {fileID: 2955809688579461854, guid: d71df0d22250a444e9a8094119e5e9a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -912,7 +912,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 1.6520876
+  m_Distance: 2.2355537
   m_DampingRatio: 0
   m_Frequency: 10
 --- !u!4 &6504166172308818023 stripped

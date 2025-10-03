@@ -44,8 +44,8 @@ Camera:
   m_GameObject: {fileID: 4492166590510950976}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.028657887, g: 0.1202385, b: 0.26415092, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf39807ce77c1b49b5ce8809669b7f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  centerLimits: {x: 0, y: 2.5}
-  sizeLimits: {x: 19, y: 16}
+  centerLimits: {x: 0, y: 0.09}
+  sizeLimits: {x: 17.8, y: 10}
   sizeDeadZone: {x: 13, y: 6}
   moveSpeed: 2
