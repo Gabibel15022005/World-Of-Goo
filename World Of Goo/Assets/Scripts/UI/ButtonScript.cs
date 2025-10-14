@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class ButtonScript : MonoBehaviour
 {
-    public bool isScalledToZero = false;
+    public bool isScaledToZero = false;
     [SerializeField] private Animator animator;
 
     void Start()
     {
-        if (isScalledToZero) animator.Play("ScaleZeroButton");
+        if (isScaledToZero) animator.Play("ScaleZeroButton");
         else SpawnButton();
     }
 

@@ -8,11 +8,13 @@ public class StarUI : MonoBehaviour
     [SerializeField] TMP_Text text;
     public bool isAlreadyUnlocked = false;
 
+    public int starNb = 0;
+
     void Start()
     {
-        if (PlayerPrefs.HasKey($"{SceneManager.GetActiveScene().name}{gameObject}"))
+        if (PlayerPrefs.HasKey($"{SceneManager.GetActiveScene().name} : star {starNb}"))
         {
-            PlayerPrefs.GetInt($"{SceneManager.GetActiveScene().name}{gameObject}");
+            PlayerPrefs.GetInt($"{SceneManager.GetActiveScene().name} : star {starNb}");
             isAlreadyUnlocked = true;
         }
     }
@@ -30,7 +32,7 @@ public class StarUI : MonoBehaviour
 
         if (!isAlreadyUnlocked)
         {
-            PlayerPrefs.SetInt($"{SceneManager.GetActiveScene().name}{gameObject}", 1);
+            PlayerPrefs.SetInt($"{SceneManager.GetActiveScene().name} : star {starNb}", 1);
             PlayerPrefs.Save();
         }
     }

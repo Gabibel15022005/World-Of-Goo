@@ -7,10 +7,10 @@ using UnityEditor;
 public class GoToScene : MonoBehaviour
 {
     #if UNITY_EDITOR
-    [SerializeField] private SceneAsset sceneAsset; // seulement visible dans l’éditeur
+    public SceneAsset sceneAsset; // seulement visible dans l’éditeur
     #endif
 
-    private string scene;
+    [HideInInspector] public string scene;
 
     private void OnValidate()
     {
