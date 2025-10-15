@@ -35,6 +35,8 @@ public class LevelSelector : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.SetInt($"{scenes[0]} is unlocked", 1);
+        PlayerPrefs.Save();
         InstantiateLevels();
     }
 
@@ -42,8 +44,11 @@ public class LevelSelector : MonoBehaviour
     {
         foreach (string scene in scenes)
         {
-            GameObject button = Instantiate(prefabButton);
-            button.GetComponent<SelectLevelButton>().SetButton(scene, content);
+            if (PlayerPrefs.HasKey($"{scene} is unlocked"))
+            {
+                GameObject button = Instantiate(prefabButton);
+                button.GetComponent<SelectLevelButton>().SetButton(scene, content);
+            }
         }
     }
 }

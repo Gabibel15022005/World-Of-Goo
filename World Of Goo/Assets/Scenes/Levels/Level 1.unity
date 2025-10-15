@@ -2704,10 +2704,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3623826279419410437, guid: 5d523643c28c3924981c2238f35ed5a4, type: 3}
+      propertyPath: nextLevelScene
+      value: Level 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3623826279419410437, guid: 5d523643c28c3924981c2238f35ed5a4, type: 3}
+      propertyPath: nextLevelSceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: d288c9a7b896abc47b058d7d8807f736, type: 3}
+    - target: {fileID: 3623826279419410437, guid: 5d523643c28c3924981c2238f35ed5a4, type: 3}
+      propertyPath: conditions.Array.data[1].intValue
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4889134986046942386, guid: 5d523643c28c3924981c2238f35ed5a4, type: 3}
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 8529098337660416027, guid: 5d523643c28c3924981c2238f35ed5a4, type: 3}
+      propertyPath: scene
+      value: LevelSelector
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529098337660416027, guid: 5d523643c28c3924981c2238f35ed5a4, type: 3}
+      propertyPath: sceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 02594de48489fb3458f574f3c9956037, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3432,7 +3452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1427832315109248387, guid: 1490fb5e7c3a8ea4ca978fe9de44a427, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1427832315109248387, guid: 1490fb5e7c3a8ea4ca978fe9de44a427, type: 3}
       propertyPath: m_LocalPosition.z

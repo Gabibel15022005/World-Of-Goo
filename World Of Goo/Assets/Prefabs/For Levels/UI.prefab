@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: RESTART
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f8bd38fe75141bc43a1c87b69254e00f, type: 2}
+  m_sharedMaterial: {fileID: 2171100027240160370, guid: f8bd38fe75141bc43a1c87b69254e00f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -92,8 +92,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -217,8 +217,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0:00
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f8bd38fe75141bc43a1c87b69254e00f, type: 2}
+  m_sharedMaterial: {fileID: 2171100027240160370, guid: f8bd38fe75141bc43a1c87b69254e00f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -391,8 +391,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: VICTORY
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f8bd38fe75141bc43a1c87b69254e00f, type: 2}
+  m_sharedMaterial: {fileID: 2171100027240160370, guid: f8bd38fe75141bc43a1c87b69254e00f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -594,6 +594,9 @@ MonoBehaviour:
     timeTaken: 0
     maxMoveNb: 0
     collectableFound: 0
+  nextLevelButton: {fileID: 8268562941648267677}
+  nextLevelSceneAsset: {fileID: 0}
+  nextLevelScene: 
 --- !u!1 &4889134986046942386
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,8 +815,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -65.3}
-  m_SizeDelta: {x: 175, y: 100}
+  m_AnchoredPosition: {x: 118.46216, y: -76.82205}
+  m_SizeDelta: {x: 211.9245, y: 123.0481}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3440757074179004571
 CanvasRenderer:
@@ -1040,8 +1043,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f8bd38fe75141bc43a1c87b69254e00f, type: 2}
+  m_sharedMaterial: {fileID: 2171100027240160370, guid: f8bd38fe75141bc43a1c87b69254e00f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1136,7 +1139,7 @@ PrefabInstance:
     - target: {fileID: 6087131947186297557, guid: 5b1f06e44fcbc4c4e97022f6302460b2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8529098337660416027}
+      objectReference: {fileID: 8268562941648267677}
     - target: {fileID: 6087131947186297557, guid: 5b1f06e44fcbc4c4e97022f6302460b2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -1147,7 +1150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6087131947186297557, guid: 5b1f06e44fcbc4c4e97022f6302460b2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GoToScene, Assembly-CSharp
+      value: GoToSceneWithString, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6087131947186297557, guid: 5b1f06e44fcbc4c4e97022f6302460b2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1239,14 +1242,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4179255777243345511, guid: 5b1f06e44fcbc4c4e97022f6302460b2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8529098337660416027}
+      addedObject: {fileID: 8268562941648267677}
   m_SourcePrefab: {fileID: 100100000, guid: 5b1f06e44fcbc4c4e97022f6302460b2, type: 3}
 --- !u!1 &3737483289876652870 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4179255777243345511, guid: 5b1f06e44fcbc4c4e97022f6302460b2, type: 3}
   m_PrefabInstance: {fileID: 730013858736427297}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8529098337660416027
+--- !u!114 &8268562941648267677
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1255,10 +1258,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3737483289876652870}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e27e9e8660b208469289b22f5087956, type: 3}
+  m_Script: {fileID: 11500000, guid: 2cecee570f9341e4b807df66c0670617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneAsset: {fileID: 0}
   scene: 
 --- !u!224 &7313334884026412887 stripped
 RectTransform:
@@ -1318,7 +1320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5689593887665007692, guid: 4f45fe5e9ee447f4f8f25e54bf88f5e0, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 850
       objectReference: {fileID: 0}
     - target: {fileID: 5689593887665007692, guid: 4f45fe5e9ee447f4f8f25e54bf88f5e0, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1773,7 +1775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5689593887665007692, guid: 4f45fe5e9ee447f4f8f25e54bf88f5e0, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 850
       objectReference: {fileID: 0}
     - target: {fileID: 5689593887665007692, guid: 4f45fe5e9ee447f4f8f25e54bf88f5e0, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1890,7 +1892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5689593887665007692, guid: 4f45fe5e9ee447f4f8f25e54bf88f5e0, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 850
       objectReference: {fileID: 0}
     - target: {fileID: 5689593887665007692, guid: 4f45fe5e9ee447f4f8f25e54bf88f5e0, type: 3}
       propertyPath: m_SizeDelta.y

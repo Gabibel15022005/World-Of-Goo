@@ -14,7 +14,6 @@ public class StarUI : MonoBehaviour
     {
         if (PlayerPrefs.HasKey($"{SceneManager.GetActiveScene().name} : star {starNb}"))
         {
-            PlayerPrefs.GetInt($"{SceneManager.GetActiveScene().name} : star {starNb}");
             isAlreadyUnlocked = true;
         }
     }

@@ -312,7 +312,7 @@ MonoBehaviour:
   springBoolCollision: 1
   springFrequency: 5
   springBreakAction: 2
-  springFloatBreak: 75
+  springFloatBreak: 150
   linkPrefab: {fileID: 1299504189342841773, guid: ba10de06c04844944a05b78189abe98c, type: 3}
   isEnding: 0
   angularSpeed: 2

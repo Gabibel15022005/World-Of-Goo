@@ -398,6 +398,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenesAsset:
   - {fileID: 102900000, guid: 08550b46fac90944b8aba7ab4a664ebf, type: 3}
+  - {fileID: 102900000, guid: d288c9a7b896abc47b058d7d8807f736, type: 3}
+  - {fileID: 102900000, guid: 9aee0984278cc16469d58e599bc1b3eb, type: 3}
   prefabButton: {fileID: 1292656969650610674, guid: 84bc5210503df904fa8286f3c57a6f75, type: 3}
   content: {fileID: 1036925887}
 --- !u!1 &578678643
@@ -738,7 +740,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.00000667572, y: 0}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1036925888
@@ -762,7 +764,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 150, y: 150}
-  m_Spacing: {x: 35, y: 0}
+  m_Spacing: {x: 75, y: 0}
   m_Constraint: 2
   m_ConstraintCount: 1
 --- !u!1 &1375156410
