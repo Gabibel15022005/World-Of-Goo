@@ -78,7 +78,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Positions: []
   m_Parameters:
     serializedVersion: 3
@@ -169,6 +169,13 @@ MonoBehaviour:
   wiggleSpeed: 10
   wiggleMagnitude: 50
   wiggleDir: {fileID: 7072132837278253109}
+  randomWiggle: 0
+  wiggleOffset: 0
+  initialTargetDist: 0
+  initialSmoothSpeed: 0
+  initialTrailSpeed: 0
+  initialWiggleMagnitude: 0
+  initialWiggleSpeed: 0
 --- !u!1 &6860280279305088627
 GameObject:
   m_ObjectHideFlags: 0
