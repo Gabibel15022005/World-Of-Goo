@@ -2,16 +2,37 @@ using System;
 using System.Collections;
 using UnityEngine;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 public class VictoryPanel : MonoBehaviour
 {
     [SerializeField] Animator animator;
     public static Action<LevelStats> SpawnVictoryPanelAction;
     [SerializeField] StarUI[] starsUI;
     [SerializeField] ConditionEntry[] conditions;
-
     [SerializeField] ButtonScript[] buttons;
-
     [HideInInspector] public LevelStats levelStats;
+
+    [SerializeField] GoToSceneWithString nextLevelButton;
+
+    #if UNITY_EDITOR
+    public SceneAsset nextLevelSceneAsset; // seulement visible dans l’éditeur
+    #endif
+    [HideInInspector] public string nextLevelScene;
+    private void OnValidate()
+    {
+    #if UNITY_EDITOR
+        if (nextLevelSceneAsset != null)
+            nextLevelScene = nextLevelSceneAsset.name;
+    #endif
+    }
+
+    void Start()
+    {
+        nextLevelButton.scene = nextLevelScene;
+    }
 
     void SpawnVictoryPanel(LevelStats stats)
     {
@@ -26,6 +47,9 @@ public class VictoryPanel : MonoBehaviour
         }
 
         animator.Play("SpawnVictoryPanel");
+
+        PlayerPrefs.SetInt($"{nextLevelScene} is unlocked", 1);
+        PlayerPrefs.Save();
     }
 
 
