@@ -56,6 +56,14 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 5141234288038076770, guid: 5b1f06e44fcbc4c4e97022f6302460b2, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5141234288038076770, guid: 5b1f06e44fcbc4c4e97022f6302460b2, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 6087131947186297557, guid: 5b1f06e44fcbc4c4e97022f6302460b2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1

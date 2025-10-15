@@ -3,9 +3,10 @@ using UnityEngine.Rendering;
 
 using UnityEditor;
 using UnityEngine.UIElements;
+
+#if UNITY_EDITOR
 using UnityEditor.UIElements;
-
-
+#endif
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer), typeof(EdgeCollider2D))]
 [RequireComponent(typeof(WaterTriggerHandler))]
 public class InteractableWater : MonoBehaviour
@@ -135,6 +136,7 @@ public class InteractableWater : MonoBehaviour
 }
 
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(InteractableWater))]
 public class InteractableWaterEditor : Editor
 {
@@ -164,7 +166,7 @@ public class InteractableWaterEditor : Editor
             text = "Place Edge Collider"
         };
 
-        
+
         root.Add(generateMesh);
         root.Add(placeEdgeColliderButton);
 
@@ -234,3 +236,6 @@ public class InteractableWaterEditor : Editor
             _water.GenerateMesh();
     }
 }
+
+
+#endif

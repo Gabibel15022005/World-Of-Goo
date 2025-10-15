@@ -1,0 +1,3 @@
+most of the fleshy dragon bone projects were corrupted :(
+Its not hard to change an existing project to the correct tentacle though, just open the project, click on the tentacle and click change image.
+- You also may need to edit the mesh.
