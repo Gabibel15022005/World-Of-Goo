@@ -1,31 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
-
 public class MainMenu : MonoBehaviour
 {
-#if UNITY_EDITOR
-    [SerializeField] private SceneAsset levelSelectorScene; // seulement visible dans l’éditeur
-    [SerializeField] private SceneAsset visualTestScene; // seulement visible dans l’éditeur
-#endif
-    
-    private string levelSelector;
-    private string visualTest;
-
-    private void OnValidate()
-    {
-#if UNITY_EDITOR
-        if (levelSelectorScene != null)
-            levelSelector = levelSelectorScene.name;
-
-        if (visualTestScene != null)
-            visualTest = visualTestScene.name;
-#endif
-    }
-
+    public int levelSelector;
+    public int visualTest;
     public void GoToLevelSelector()
     {
         GoToScene(levelSelector);
@@ -35,7 +14,7 @@ public class MainMenu : MonoBehaviour
         GoToScene(visualTest);
     }
 
-    private void GoToScene(string sceneName)
+    private void GoToScene(int sceneName)
     {
         SceneManager.LoadSceneAsync(sceneName);
     }

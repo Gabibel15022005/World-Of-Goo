@@ -16,18 +16,7 @@ public class VictoryPanel : MonoBehaviour
     [HideInInspector] public LevelStats levelStats;
 
     [SerializeField] GoToSceneWithString nextLevelButton;
-
-    #if UNITY_EDITOR
-    public SceneAsset nextLevelSceneAsset; // seulement visible dans l’éditeur
-    #endif
-    [HideInInspector] public string nextLevelScene;
-    private void OnValidate()
-    {
-    #if UNITY_EDITOR
-        if (nextLevelSceneAsset != null)
-            nextLevelScene = nextLevelSceneAsset.name;
-    #endif
-    }
+    public string nextLevelScene;
 
     void Start()
     {
