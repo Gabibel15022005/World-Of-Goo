@@ -617,6 +617,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tencacle
       objectReference: {fileID: 0}
+    - target: {fileID: 1765574980227571157, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765574980227571157, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765574980227571157, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765574980227571157, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 0.33962262
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765574980227571157, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 0.33962262
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765574980227571157, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 0.33962262
+      objectReference: {fileID: 0}
     - target: {fileID: 3875294732457863519, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
       propertyPath: trailSpeed
       value: 500
@@ -702,6 +726,30 @@ PrefabInstance:
     - target: {fileID: 83693182989939631, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
       propertyPath: m_Name
       value: Tencacle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765574980227571157, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765574980227571157, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765574980227571157, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765574980227571157, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 0.33962262
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765574980227571157, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 0.33962262
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765574980227571157, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 0.33962262
       objectReference: {fileID: 0}
     - target: {fileID: 3875294732457863519, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
       propertyPath: trailSpeed
@@ -808,6 +856,30 @@ PrefabInstance:
     - target: {fileID: 83693182989939631, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
       propertyPath: m_Name
       value: Tencacle (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765574980227571157, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765574980227571157, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765574980227571157, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765574980227571157, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 0.33962262
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765574980227571157, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 0.33962262
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765574980227571157, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 0.33962262
       objectReference: {fileID: 0}
     - target: {fileID: 3875294732457863519, guid: abe88d0d3977bc64b848ca94c49587e0, type: 3}
       propertyPath: trailSpeed
