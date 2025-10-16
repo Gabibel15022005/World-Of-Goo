@@ -15,12 +15,12 @@ public class VictoryPanel : MonoBehaviour
     [SerializeField] ButtonScript[] buttons;
     [HideInInspector] public LevelStats levelStats;
 
-    [SerializeField] GoToSceneWithString nextLevelButton;
-    public string nextLevelScene;
+    [SerializeField] GoToScene nextLevelButton;
+    public Level nextLevelScene;
 
     void Start()
     {
-        nextLevelButton.scene = nextLevelScene;
+        nextLevelButton.scene = nextLevelScene.buildIndex;
     }
 
     void SpawnVictoryPanel(LevelStats stats)
@@ -37,7 +37,7 @@ public class VictoryPanel : MonoBehaviour
 
         animator.Play("SpawnVictoryPanel");
 
-        PlayerPrefs.SetInt($"{nextLevelScene} is unlocked", 1);
+        PlayerPrefs.SetInt($"{nextLevelScene.sceneName} is unlocked", 1);
         PlayerPrefs.Save();
     }
 

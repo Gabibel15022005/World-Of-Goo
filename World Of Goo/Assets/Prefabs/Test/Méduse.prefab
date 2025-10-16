@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 445371597373475109}
   - component: {fileID: 3464427498688286214}
+  - component: {fileID: 5967740119434803024}
   m_Layer: 0
   m_Name: "M\xE9duse"
   m_TagString: Untagged
@@ -55,6 +56,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5967740119434803024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523322355661283906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cce8f47c448ca2e4ebbd2bf4afbb7769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleStateName: MeduseIdle
+  maxOffset: 1
+  animator: {fileID: 3464427498688286214}
 --- !u!1 &824282832154299280
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,8 +195,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.62, y: 0.82666665, z: 0.82666665}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 58730378012490856}
   m_Father: {fileID: 445371597373475109}

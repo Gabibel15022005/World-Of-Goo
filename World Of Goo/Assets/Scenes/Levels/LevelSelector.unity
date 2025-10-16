@@ -396,9 +396,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenes:
-  - Level 1
-  - Level 2
-  - Level 3
+  - buildIndex: 3
+    sceneName: Level 1
+  - buildIndex: 4
+    sceneName: Level 2
+  - buildIndex: 5
+    sceneName: Level 3
   prefabButton: {fileID: 1292656969650610674, guid: 84bc5210503df904fa8286f3c57a6f75, type: 3}
   content: {fileID: 1036925887}
 --- !u!1 &578678643

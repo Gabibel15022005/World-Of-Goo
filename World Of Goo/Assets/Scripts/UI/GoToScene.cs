@@ -6,6 +6,6 @@ public class GoToScene : MonoBehaviour
 
     public void GoToThisScene()
     {
-        SceneManager.LoadSceneAsync(scene);
+        ActivateTransition.ChangeSceneWithInt?.Invoke(scene);
     }
 }
