@@ -176,6 +176,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   endTimer: 2.5
+  shockWavePrefab: {fileID: 7010796004281706493, guid: a3ef3a8b80b85a54f9b52d0cc963320a, type: 3}
+  shockWaveDuration: 0.75
 --- !u!114 &5995648841607601814
 MonoBehaviour:
   m_ObjectHideFlags: 0

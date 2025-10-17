@@ -5,13 +5,29 @@ public class Collectable : MonoBehaviour
     // call AddCollectableAction when collected
 
     private bool hasFoundGoo = false;
+    private bool canBeCollected = true;
     [SerializeField] private float radius = 2;
     [SerializeField] private LayerMask gooLayerMask;
 
 
+    void OnEnable()
+    {
+        EndOfLevel.PosEndOfLevel += DeactivateCollectable;
+    }
+    void OnDisable()
+    {
+        EndOfLevel.PosEndOfLevel -= DeactivateCollectable;
+    }
+
+    private void DeactivateCollectable(Transform transform)
+    {
+        canBeCollected = false;
+    }
+
+
     void Update()
     {
-        if (hasFoundGoo) return;
+        if (hasFoundGoo || !canBeCollected) return;
 
         hasFoundGoo = CheckIfHasFoundGoo();
 

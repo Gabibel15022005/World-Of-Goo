@@ -1,8 +1,12 @@
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class EndOfLevel : MonoBehaviour
 {
+
+    
+    [Header("End of level Parameter")]
     private bool hasReachedTheEnd = false;
     public bool HasReachedTheEnd => hasReachedTheEnd;
 
@@ -13,6 +17,15 @@ public class EndOfLevel : MonoBehaviour
     [SerializeField] private float endTimer;
     private float timer;
     public static Action<Transform> PosEndOfLevel;
+
+    [Space(30)]
+    [Header("ShockWave Parameter")]
+    [SerializeField] GameObject shockWavePrefab;
+    [SerializeField] float shockWaveDuration = 0.75f;
+    [SerializeField] float shockWaveStrength = 0.5f;
+
+
+
     void Update()
     {
         if (hasReachedTheEnd) return;
@@ -40,7 +53,7 @@ public class EndOfLevel : MonoBehaviour
             if (timer >= endTimer)
             {
                 hasReachedTheEnd = true;
-                PosEndOfLevel?.Invoke(transform);
+                StartEndOfLevel();
                 return;
             }
         }
@@ -49,6 +62,14 @@ public class EndOfLevel : MonoBehaviour
             timer = 0;
         }
 
+    }
+
+    private void StartEndOfLevel()
+    {
+        GameObject shockWaveGameObject = Instantiate(shockWavePrefab, transform.position, quaternion.identity);
+        ShockWaveManager shockWave = shockWaveGameObject.GetComponent<ShockWaveManager>();
+        shockWave.StartShockWave(shockWaveDuration , shockWaveStrength);
+        PosEndOfLevel?.Invoke(transform);
     }
 
     void OnDrawGizmos()

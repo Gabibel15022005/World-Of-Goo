@@ -396,9 +396,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenes:
-  - Level 1
-  - Level 2
-  - Level 3
+  - buildIndex: 3
+    sceneName: Level 1
+  - buildIndex: 4
+    sceneName: Level 2
+  - buildIndex: 5
+    sceneName: Level 3
   prefabButton: {fileID: 1292656969650610674, guid: 84bc5210503df904fa8286f3c57a6f75, type: 3}
   content: {fileID: 1036925887}
 --- !u!1 &578678643
@@ -575,10 +578,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
