@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using UnityEngine;
 
 public class EndOfLevelTentacles : MonoBehaviour
@@ -8,7 +9,7 @@ public class EndOfLevelTentacles : MonoBehaviour
     [SerializeField] float fastRotationSpeed = 500;
     [SerializeField] float speedChangeRate = 1f; // vitesse d’accélération globale (0 = instant, plus grand = plus lent)
 
-    [Space(30)] 
+    [Space(30)]
     [Header("When End Of Level")]
     [SerializeField] private Tentacle[] tentaclesB;
     [SerializeField] private Tentacle[] tentaclesW;
@@ -31,7 +32,6 @@ public class EndOfLevelTentacles : MonoBehaviour
 
     // Progression entre état "lent" et état "rapide" (0 → slow, 1 → fast)
     private float transitionT = 0f;
-
     void Update()
     {
         // avancer ou reculer la transition
@@ -55,11 +55,14 @@ public class EndOfLevelTentacles : MonoBehaviour
     {
         foreach (Tentacle tentacle in list)
         {
-            tentacle.targetDist     = Mathf.Lerp(tentacle.initialTargetDist, targetDist, t);
-            tentacle.smoothSpeed    = Mathf.Lerp(tentacle.initialSmoothSpeed, smoothSpeed, t);
-            tentacle.trailSpeed     = Mathf.Lerp(tentacle.initialTrailSpeed, trailSpeed, t);
-            tentacle.wiggleSpeed    = Mathf.Lerp(tentacle.initialWiggleSpeed, wiggleSpeed, t);
-            tentacle.wiggleMagnitude= Mathf.Lerp(tentacle.initialWiggleMagnitude, wiggleMagnitude, t);
+            tentacle.targetDist = Mathf.Lerp(tentacle.initialTargetDist, targetDist, t);
+            tentacle.smoothSpeed = Mathf.Lerp(tentacle.initialSmoothSpeed, smoothSpeed, t);
+            tentacle.trailSpeed = Mathf.Lerp(tentacle.initialTrailSpeed, trailSpeed, t);
+            tentacle.wiggleSpeed = Mathf.Lerp(tentacle.initialWiggleSpeed, wiggleSpeed, t);
+            tentacle.wiggleMagnitude = Mathf.Lerp(tentacle.initialWiggleMagnitude, wiggleMagnitude, t);
         }
     }
+    
+
+
 }

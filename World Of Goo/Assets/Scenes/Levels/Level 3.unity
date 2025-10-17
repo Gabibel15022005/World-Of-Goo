@@ -1745,6 +1745,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4230897363286651173, guid: 519177ccfe2a1b343bd65b3fbdc51741, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230897363286651173, guid: 519177ccfe2a1b343bd65b3fbdc51741, type: 3}
+      propertyPath: m_SortingOrder
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230897363286651173, guid: 519177ccfe2a1b343bd65b3fbdc51741, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6169830882941037375, guid: 519177ccfe2a1b343bd65b3fbdc51741, type: 3}
       propertyPath: m_Mesh
       value: 
