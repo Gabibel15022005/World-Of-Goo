@@ -4444,7 +4444,11 @@ PrefabInstance:
       objectReference: {fileID: 102900000, guid: 02594de48489fb3458f574f3c9956037, type: 3}
     - target: {fileID: 3623826279419410437, guid: 5d523643c28c3924981c2238f35ed5a4, type: 3}
       propertyPath: nextLevelScene.sceneName
-      value: MainMenu
+      value: Level 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3623826279419410437, guid: 5d523643c28c3924981c2238f35ed5a4, type: 3}
+      propertyPath: nextLevelScene.buildIndex
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3623826279419410437, guid: 5d523643c28c3924981c2238f35ed5a4, type: 3}
       propertyPath: conditions.Array.data[0].intValue

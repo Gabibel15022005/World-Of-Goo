@@ -3724,10 +3724,6 @@ PrefabInstance:
       propertyPath: centerLimits.y
       value: -0.34
       objectReference: {fileID: 0}
-    - target: {fileID: 2495674021560983090, guid: 4d16a6658249b5949b0da1790bd15d1a, type: 3}
-      propertyPath: m_BackGroundColor.a
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4492166590510950976, guid: 4d16a6658249b5949b0da1790bd15d1a, type: 3}
       propertyPath: m_Name
       value: Main Camera
