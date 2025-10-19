@@ -404,6 +404,8 @@ MonoBehaviour:
     sceneName: Level 3
   - buildIndex: 6
     sceneName: Level 4
+  - buildIndex: 7
+    sceneName: Level 5
   prefabButton: {fileID: 1292656969650610674, guid: 84bc5210503df904fa8286f3c57a6f75, type: 3}
   content: {fileID: 1036925887}
 --- !u!1 &578678643
@@ -488,8 +490,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1375156412}
   m_HandleRect: {fileID: 1375156411}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
